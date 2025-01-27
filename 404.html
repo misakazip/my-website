@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="404 Not Found">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - ページが見つかりません</title>
+    <style>
+        :root {
+            --primary-color: #78c0e0;
+            --secondary-color: #a8e6cf;
+            --background-color: #D3F9FA;
+            --text-color: #333;
+            --link-text-color: #ffffff;
+            --container-background: #ffffff;
+            --container-shadow: rgba(0, 0, 0, 0.2);
+        }
+
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 30px;
+            border-radius: 25px;
+            background: var(--container-background);
+            box-shadow: 0 10px 20px var(--container-shadow);
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 0.5em;
+            color: #4a4a4a;
+            text-shadow: 2px 2px #d1c4e9;
+        }
+
+        p {
+            font-size: 1.4em;
+            line-height: 2;
+            margin: 10px 0;
+            color: #555;
+            text-shadow: 1px 1px #eceff1;
+        }
+
+        .link {
+            text-decoration: none;
+            color: var(--link-text-color);
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            padding: 12px 30px;
+            border-radius: 30px;
+            margin: 10px;
+            display: inline-flex;
+            align-items: center;
+            font-size: 1.2em;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .link:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>404 - ページが見つかりません</h1>
+        <p>申し訳ありませんが、お探しのページは見つかりませんでした。</p>
+        <a href="/" class="link">ホームに戻る</a>
+    </div>
+</body>
+</html>
