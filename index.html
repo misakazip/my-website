@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>プロフィール</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #ffffff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 50px auto;
+            text-align: center;
+            padding: 30px;
+            border-radius: 25px;
+            background: #ffffff;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 0.5em;
+            color: #4a4a4a;
+            text-shadow: 2px 2px #d1c4e9;
+        }
+
+        p {
+            font-size: 1.4em;
+            line-height: 2;
+            margin: 10px 0;
+            color: #555;
+            text-shadow: 1px 1px #eceff1;
+        }
+
+        .links {
+            margin-top: 25px;
+        }
+
+        .link {
+            text-decoration: none;
+            color: #ffffff;
+            background: linear-gradient(135deg, #78c0e0, #a8e6cf);
+            padding: 12px 30px;
+            border-radius: 30px;
+            margin: 10px;
+            display: inline-flex;
+            align-items: center;
+            font-size: 1.2em;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .link:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .link img {
+            width: 24px;
+            height: 24px;
+            margin-right: 8px;
+        }
+
+        .profile-image {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            border: 4px solid #a8e6cf;
+        }
+
+        footer {
+            margin-top: 50px;
+            font-size: 1em;
+            color: #888;
+        }
+
+        footer a {
+            color: #78c0e0;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://avatars.githubusercontent.com/u/79515833?v=4" alt="プロフィール写真" class="profile-image">
+        <h1>Misaka</h1>
+        <p>はじめまして！情報系の学部を目指している高校3年です！<br>仲良くして嬉しいです！</p>
+        
+        <div class="links">
+            <a href="https://x.com/misakazip" class="link" target="_blank">
+                <img src="/images/x.png" alt="X">
+                Twitter
+            </a>
+            <a href="https://github.com/misakazip" class="link" target="_blank">
+                <img src="/images/github.svg" alt="GitHub">
+                GitHub
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 Misaka</p>
+    </footer>
+</body>
+</html>
