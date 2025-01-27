@@ -126,7 +126,7 @@
                 <img src="/images/telegram.png" alt="Telegram">
                 Telegram
             </a>
-            <a href="mailto:website@misaka.zip" class="link" target="_blank">
+            <a id="email-link" class="link" target="_blank">
                 <img src="/images/email.png" alt="Email">
                 Email
             </a>
@@ -136,5 +136,20 @@
     <footer>
         <p>© 2025 Misaka.zip</p>
     </footer>
+
+    <script>
+        const encodedEmail = "d2Vic2l0ZUBtaXNha2Euemlw";
+        function decodeBase64(encoded) {
+            return decodeURIComponent(atob(encoded).split('').map(function(c) {
+                return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+            }).join(''));
+        }
+        document.addEventListener("DOMContentLoaded", function() {
+            const email = decodeBase64(encodedEmail);
+            const emailLink = document.getElementById("email-link");
+            emailLink.href = "mailto:" + email;
+            emailLink.innerHTML += ` (${email})`;
+        });
+    </script>
 </body>
 </html>
