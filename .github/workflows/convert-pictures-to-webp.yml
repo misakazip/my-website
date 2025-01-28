@@ -14,21 +14,23 @@ jobs:
     - name: Check out repository
       uses: actions/checkout@v4
 
-    - name: Install ffmpeg
-      run: sudo apt-get install -y ffmpeg
+    - name: Install ImageMagick
+      run: sudo apt-get install -y imagemagick
 
-    - name: Convert images to webp
+    - name: Convert images to webp and commit changes
       run: |
-        find images/ -type f \( -iname '*.png' -o -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.svg' \) -print0 | \
-        while IFS= read -r -d '' file; do
-          ffmpeg -i "$file" "${file%.*}.webp" && rm "$file"
-        done
-
-    - name: Check for changes and push
-      id: git_diff
-      run: |
+        # Configure Git
         git config --global user.name 'github-actions[bot]'
         git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
+
+        # Convert images to WebP and remove originals
+        find images/ -type f \( -iname '*.png' -o -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.svg' \) -print0 | \
+        while IFS= read -r -d '' file; do
+          output="${file%.*}.webp"
+          convert "$file" "$output" && rm "$file"
+        done
+
+        # Add and check for changes
         git add -A
         if ! git diff --cached --quiet; then
           git commit -m 'Convert images to webp format and remove original images'
