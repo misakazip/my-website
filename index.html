@@ -5,154 +5,50 @@
     <meta name="description" content="Misakaのプロフィールページです。">
     <meta name="keywords" content="プロフィール, Misaka">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>プロフィール</title>
-    <style>
-        :root {
-            --primary-color: #78c0e0;
-            --secondary-color: #a8e6cf;
-            --background-color: #D3F9FA;
-            --text-color: #333;
-            --link-text-color: #ffffff;
-            --container-background: #ffffff;
-            --container-shadow: rgba(0, 0, 0, 0.2);
-        }
-
-        body {
-            font-family: 'Courier New', Courier, monospace;
-            background-color: var(--background-color);
-            color: var(--text-color);
-            margin: 0;
-            padding: 0;
-        }
-
-        .container {
-            max-width: 700px;
-            margin: 50px auto;
-            text-align: center;
-            padding: 30px;
-            border-radius: 25px;
-            background: var(--container-background);
-            box-shadow: 0 10px 20px var(--container-shadow);
-        }
-
-        h1 {
-            font-size: 3em;
-            margin-bottom: 0.5em;
-            color: #4a4a4a;
-            text-shadow: 2px 2px #d1c4e9;
-        }
-
-        p {
-            font-size: 1.4em;
-            line-height: 2;
-            margin: 10px 0;
-            color: #555;
-            text-shadow: 1px 1px #eceff1;
-        }
-
-        .links {
-            margin-top: 25px;
-        }
-
-        .link {
-            text-decoration: none;
-            color: var(--link-text-color);
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            padding: 12px 30px;
-            border-radius: 30px;
-            margin: 10px;
-            display: inline-flex;
-            align-items: center;
-            font-size: 1.2em;
-            font-weight: bold;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .link:hover {
-            transform: scale(1.1);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-        }
-
-        .link img {
-            width: 24px;
-            height: 24px;
-            margin-right: 8px;
-        }
-
-        .profile-image {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            object-fit: cover;
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-            border: 4px solid var(--secondary-color);
-        }
-
-        footer {
-            margin-top: 50px;
-            font-size: 1em;
-            color: #888;
-        }
-
-        footer a {
-            color: var(--primary-color);
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <title>Misakaのプロフィール</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <img src="/images/icon.webp" alt="Misakaのアイコン" class="profile-image">
-        <h1>Misaka</h1>
-        <p>はじめまして！情報系の学部を目指している高校3年です！<br>仲良くして欲しいです！</p>
-        <p>Icon: <a href="https://www.pixiv.net/users/60562229" target="_blank">Ravimo</a></p>
-        
-        <div class="links">
-            <a href="https://x.com/misakazip" class="link" target="_blank">
-                <img src="/images/x.webp" alt="X">
-                Twitter
-            </a>
-            <a href="https://github.com/misakazip" class="link" target="_blank">
-                <img src="/images/github.webp" alt="GitHub">
-                GitHub
-            </a>
-            <a href = "https://discord.gg/qqNktzSw" class="link" target="_blank">
-                <img src="/images/discord.webp" alt="Discord">
-                Discord
-            </a>
-            <a href="https://t.me/misakazip" class="link" target="_blank">
-                <img src="/images/telegram.webp" alt="Telegram">
-                Telegram
-            </a>
-            <a id="email-link" class="link" target="_blank">
-                <img src="/images/email.webp" alt="Email">
-                Email
-            </a>
+    <header>
+        <div class="container">
+            <img src="/images/icon.webp" alt="Misakaのアイコン" class="profile-image">
+            <h1>Misaka</h1>
+            <p>はじめまして！情報系の学部を目指している高校3年です！<br>仲良くして欲しいです！</p>
+            <p>Icon: <a href="https://www.pixiv.net/users/60562229" target="_blank" rel="noopener noreferrer">Ravimo</a></p>
         </div>
-    </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="links">
+                <a href="https://x.com/misakazip" class="link" target="_blank" rel="noopener noreferrer">
+                    <img src="/images/x.webp" alt="X">
+                    Twitter
+                </a>
+                <a href="https://github.com/misakazip" class="link" target="_blank" rel="noopener noreferrer">
+                    <img src="/images/github.webp" alt="GitHub">
+                    GitHub
+                </a>
+                <a href="https://discord.gg/qqNktzSw" class="link" target="_blank" rel="noopener noreferrer">
+                    <img src="/images/discord.webp" alt="Discord">
+                    Discord
+                </a>
+                <a href="https://t.me/misakazip" class="link" target="_blank" rel="noopener noreferrer">
+                    <img src="/images/telegram.webp" alt="Telegram">
+                    Telegram
+                </a>
+                <a id="email-link" class="link" target="_blank" rel="noopener noreferrer">
+                    <img src="/images/email.webp" alt="Email">
+                    Email
+                </a>
+            </div>
+        </div>
+    </main>
 
     <footer>
         <p>© 2025 Misaka.zip</p>
     </footer>
 
-    <script>
-        const encodedEmail = "d2Vic2l0ZUBtaXNha2Euemlw";
-        function decodeBase64(encoded) {
-            return decodeURIComponent(atob(encoded).split('').map(function(c) {
-                return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
-            }).join(''));
-        }
-        document.addEventListener("DOMContentLoaded", function() {
-            const email = decodeBase64(encodedEmail);
-            const emailLink = document.getElementById("email-link");
-            emailLink.href = "mailto:" + email;
-        });
-    </script>
+    <script src="scripts.js"></script>
 </body>
 </html>
