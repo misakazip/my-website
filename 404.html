@@ -4,25 +4,20 @@
     <meta charset="UTF-8">
     <meta name="description" content="404 Not Found">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="5;url=https://misaka.zip/">
     <title>404 - ページが見つかりません</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <main class="container">
+    <div class="container">
         <h1>404 - ページが見つかりません</h1>
         <p>申し訳ありませんが、お探しのページは見つかりませんでした。</p>
         <p id="redirect-message">5秒後にホームページにリダイレクトされます。</p>
         <a href="/" class="link">ホームに戻る</a>
-    </main>
+    </div>
+    <script src="index.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            const redirectMessage = document.getElementById("redirect-message");
-            let seconds = 5;
-            setInterval(function() {
-                seconds--;
-                redirectMessage.textContent = `${seconds}秒後にホームページにリダイレクトされます。`;
-            }, 1000);
+            startRedirectCountdown("https://misaka.zip/", 5);
         });
     </script>
 </body>
