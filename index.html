@@ -29,7 +29,7 @@
                     <img src="/images/github.webp" alt="GitHub">
                     GitHub
                 </a>
-                <a href="https://discord.gg/qqNktzSw" class="link" target="_blank" rel="noopener noreferrer">
+                <a class="link" onclick="showPopup('misaka8010', 'Discordのリンクは有効期限があり、リンクを置くことができません…😿')">
                     <img src="/images/discord.webp" alt="Discord">
                     Discord
                 </a>
@@ -54,6 +54,9 @@
         document.addEventListener("DOMContentLoaded", function() {
             initializeEmailLink("d2Vic2l0ZUBtaXNha2Euemlw", "email-link");
         });
+        function showPopup(username, message) {
+        alert(`${message}\nUser名: ${username}`);
+    }
     </script>
 </body>
 </html>
